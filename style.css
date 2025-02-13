@@ -507,9 +507,21 @@ footer .line-footer p a {
     animation: flutuar_foto 2s ease-in-out infinite alternate; */
   }
   /*ESTILO DAS ESPECIALIDADES*/
+
   section.especialidades {
     padding: 40px 8%;
   }
+
+  section.especialidades .especialidades-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  section.especialidades .especialidades-box i {
+    font-size: 60px;
+  }
+
   /*ESTILO SOBRE*/
   section.sobre {
     padding: 80px 8%;
@@ -544,5 +556,38 @@ footer .line-footer p a {
   }
   footer .line-footer {
     text-align: center;
+  }
+}
+
+/* Esconder o botão em telas maiores que 1020px */
+@media screen and (min-width: 1021px) {
+  #btn-menu-lateral-mobile {
+    display: none; /* Esconde o botão */
+  }
+  /* Estilo para o menu no desktop */
+  @media screen and (min-width: 1021px) {
+    /* Garantir que o menu do desktop seja exibido em linha */
+    header nav ul {
+      display: flex; /* Flexbox para alinhar os itens em linha */
+      list-style-type: none; /* Remove os marcadores de lista */
+    }
+
+    header nav ul li {
+      display: inline-block; /* Garante que os itens fiquem um ao lado do outro */
+      padding: 0 20px; /* Espaçamento entre os itens */
+    }
+
+    /* Estilo dos links do menu */
+    header nav ul li a {
+      color: rgb(109, 109, 109); /* Cor original dos links */
+      font-size: 18px; /* Tamanho da fonte */
+      text-decoration: none; /* Remove o sublinhado */
+      transition: color 0.3s ease, transform 0.3s ease; /* Transição suave ao passar o mouse */
+    }
+
+    header nav ul li a:hover {
+      color: white; /* Cor ao passar o mouse */
+      transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    }
   }
 }
