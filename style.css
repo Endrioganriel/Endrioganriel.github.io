@@ -27,6 +27,10 @@ body {
   border-radius: 30px;
   cursor: pointer;
 }
+.btn-maisp {
+  text-align: center;
+  margin-top: 50px;
+}
 button:hover,
 form .btn-enviar input:hover {
   box-shadow: 0px 0px 8px #e21203;
@@ -36,6 +40,7 @@ h2.titulo {
   color: white;
   font-size: 38px;
   text-align: center;
+  font-weight: bold;
 }
 h2.titulo span {
   color: #e21203;
@@ -140,8 +145,9 @@ section.topo_site .flex {
 }
 .topo_site h1 {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 40px;
+  font-weight: bold;
   /* animation: words 20s infinite; */
 }
 
@@ -319,10 +325,12 @@ section.sobre .flex {
   font-size: 40px;
   line-height: 40px;
   margin-bottom: 30px;
+  font-weight: bold;
 }
 .sobre .txt-sobre h2 span {
   color: #e21203;
   display: block;
+  font-weight: bold;
 }
 .sobre .txt-sobre p {
   margin: 30px 0;
@@ -531,6 +539,10 @@ footer .line-footer p a {
     line-height: 35px;
     text-align: center;
   }
+  .sobre .txt-sobre p {
+    font-size: 15px;
+    text-align: center;
+  }
   .btn-social {
     text-align: center;
   }
@@ -580,7 +592,7 @@ footer .line-footer p a {
     /* Estilo dos links do menu */
     header nav ul li a {
       color: rgb(109, 109, 109); /* Cor original dos links */
-      font-size: 18px; /* Tamanho da fonte */
+
       text-decoration: none; /* Remove o sublinhado */
       transition: color 0.3s ease, transform 0.3s ease; /* Transição suave ao passar o mouse */
     }
@@ -591,3 +603,86 @@ footer .line-footer p a {
     }
   }
 }
+
+/*Certificados*/
+/* section.certi {
+  padding: 80px 4%;
+  display: flex;
+}
+section.certi .flex {
+  align-items: center;
+  padding: 80px 4%;
+} */
+
+/* Estilo customizado para os cards */
+/* .custom-card {
+  width: 20rem; 
+  height: 400px; 
+  margin: 10px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.custom-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 10px;
+} */
+
+/* Estilo customizado para os cards */
+.custom-card {
+  width: 20rem; /* Largura fixa */
+  height: 200px; /* Altura fixa */
+  margin: 10px; /* Espaço entre os cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.custom-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* Personalizando as setas do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute; /* Faz com que as setas fiquem fora do espaço dos cards */
+  top: 50%; /* Alinha as setas verticalmente no meio */
+  transform: translateY(
+    -50%
+  ); /* Ajusta para que as setas fiquem bem centralizadas */
+  width: 5%; /* Largura menor das setas */
+  height: 100%; /* Altura total do carrossel */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* Fundo semi-transparente para as setas */
+  color: #ffffff; /* Cor das setas */
+  display: flex;
+  justify-content: center; /* Alinha o ícone no centro */
+  align-items: center; /* Alinha verticalmente o ícone */
+  z-index: 10; /* Garante que as setas fiquem acima dos cards */
+}
+
+/* Personalizando a seta da esquerda */
+.carousel-control-prev {
+  left: -33px; /* A seta da esquerda vai para fora da área do carrossel */
+}
+
+/* Personalizando a seta da direita */
+.carousel-control-next {
+  right: -33px; /* A seta da direita vai para fora da área do carrossel */
+}
+
+/* carrosel media */

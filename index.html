@@ -21,6 +21,17 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+    <!-- Link para o CSS do Bootstrap -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Optional: Para ícones do Bootstrap (se necessário) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
 
@@ -40,9 +51,10 @@
         <nav class="menu-desktop">
           <ul>
             <li><a href="">Inicio</a></li>
-            <li><a href="">Especialidade</a></li>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Projetos</a></li>
+            <li><a href="#especialidade">Especialidade</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contatos">Contato</a></li>
           </ul>
         </nav>
         <div class="btn-contato">
@@ -63,10 +75,10 @@
           <nav>
             <ul>
               <li><a href="#">Inicio</a></li>
-              <li><a href="#">Especialidade</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Projetos</a></li>
-              <li><a href="#">Contato</a></li>
+              <li><a href="#especialidade">Especialidade</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#contatos">Contato</a></li>
             </ul>
           </nav>
         </div>
@@ -106,7 +118,7 @@
       </section>
       <!--TOPO DO SITE-->
 
-      <section class="especialidades">
+      <section class="especialidades" id="especialidade">
         <div class="interface">
           <h2 class="titulo">Minhas <span>Skills.</span></h2>
           <div class="flex">
@@ -144,7 +156,7 @@
       </section>
       <!--ESPECIALIDADES-->
 
-      <section class="sobre">
+      <section class="sobre" id="sobre">
         <div class="interface">
           <div class="flex">
             <div class="img-sobre">
@@ -181,34 +193,164 @@
       </section>
       <!--SOBRE-->
 
+      <!--Certificaçoes-->
+      <!--
       <section class="projetos">
+        <div class="interface">
+          <h2 class="titulo">Certificados</h2>
+          <div class="flex">
+           
+            <div
+              id="carouselExampleControls"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+             
+                <div class="carousel-item active">
+                  <div class="row">
+           
+                    <div class="col-12 col-sm-4 col-md-4">
+                      <div class="card custom-card">
+                        <img
+                          src="certificados/1.jpg"
+                          class="card-img-top"
+                          alt="Imagem 1"
+                        />
+                      </div>
+                    </div>
+
+                
+                    <div class="col-12 col-sm-4 col-md-4">
+                      <div class="card custom-card">
+                        <img
+                          src="certificados/2.jpg"
+                          class="card-img-top"
+                          alt="Imagem 2"
+                        />
+                      </div>
+                    </div>
+
+                  
+                    <div class="col-12 col-sm-4 col-md-4">
+                      <div class="card custom-card">
+                        <img
+                          src="certificados/3.jpeg"
+                          class="card-img-top"
+                          alt="Imagem 3"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+               
+                <div class="carousel-item">
+                  <div class="row">
+                   
+                    <div class="col-12 col-sm-4 col-md-4">
+                      <div class="card custom-card">
+                        <img
+                          src="certificados/4.jpg"
+                          class="card-img-top"
+                          alt="Imagem 4"
+                        />
+                      </div>
+                    </div>
+
+                  
+                    <div class="col-12 col-sm-4 col-md-4">
+                      <div class="card custom-card">
+                        <img
+                          src="certificados/5.jpg"
+                          class="card-img-top"
+                          alt="Imagem 5"
+                        />
+                      </div>
+                    </div>
+
+                  
+                    <div class="col-12 col-sm-4 col-md-4">
+                      <div class="card custom-card">
+                        <img
+                          src="certificados/6.jpg"
+                          class="card-img-top"
+                          alt="Imagem 6"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Próximo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+     
+
+    -->
+
+      <section class="projetos" id="projetos">
         <div class="interface">
           <h2 class="titulo">Meus <span>Projetos.</span></h2>
           <div class="flex">
             <div
               class="img-port"
-              style="background-image: url(images/aprenser.png)"
+              style="background-image: url(images/MANUTENCAO.webp)"
             >
               <div class="overlay">Projeto Onça</div>
             </div>
             <div
               class="img-port"
-              style="background-image: url(images/aprenser.png)"
+              style="background-image: url(images/MANUTENCAO.webp)"
             >
               <div class="overlay">Projeto 2</div>
             </div>
             <div
               class="img-port"
-              style="background-image: url(images/aprenser.png)"
+              style="background-image: url(images/preview.png)"
             >
               <div class="overlay">Projeto 3</div>
             </div>
           </div>
         </div>
+        <div class="btn-contato btn-maisp">
+          <a href="https://github.com/Endrioganriel">
+            <button>Mais projetos</button>
+          </a>
+        </div>
       </section>
       <!--PROJETOS-->
 
-      <section class="formulario">
+      <section class="formulario" id="contatos">
         <div class="interface">
           <h2 class="titulo">Fala <span>comigo.</span></h2>
           <form action="">
@@ -231,13 +373,13 @@
               <img src="images/Gabriel.png" alt="logotipo" />
             </div>
             <div class="btn-social">
-              <a href=""
+              <a href="https://wa.me/qr/BM6WQFATIDNIL1"
                 ><button><i class="bi bi-whatsapp"></i></button
               ></a>
-              <a href=""
+              <a href="https://www.linkedin.com/in/gabriel-souza-730b75185"
                 ><button><i class="bi bi-linkedin"></i></button
               ></a>
-              <a href=""
+              <a href="https://github.com/Endrioganriel"
                 ><button><i class="bi bi-github"></i></button
               ></a>
             </div>
@@ -253,5 +395,10 @@
         </div>
       </div>
     </footer>
+
+    <!-- Link para o JavaScript do Bootstrap (pode ser necessário para alguns componentes interativos) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
