@@ -1,0 +1,650 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Changa', sans-serif;
+    line-height: 1.6;
+    height: 100%;
+    scroll-behavior: smooth;
+
+  }
+  /* html, body {
+  overflow-x: hidden;
+} */
+
+
+  h1, h2, h3, button {
+    font-family: 'Changa', sans-serif;
+    text-transform: uppercase;
+
+  }
+  button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+ button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 102, 0, 0.4);
+  }
+
+
+/* Botão Whats */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Distância do rodapé */
+  right: 20px;  /* Distância da borda direita */
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+#whatsapp-button img {
+  width: 60px;       /* Tamanho da imagem */
+  height: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px; /* Deixa mais com cara de botão, opcional */
+}
+
+/* Efeito de zoom e escurecer ao passar o mouse */
+#whatsapp-button img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  
+}
+
+
+   .linha-topo {
+  background: #103a1e; /* verde escuro */
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 10;
+  width: 97%;
+  margin: 50px auto; /* top e bottom 50px, centralizado horizontalmente */
+
+  /* Efeito flutuar: sombra e leve transformação */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+/* Pequena animação hover para dar sensação de flutuar */
+/* .linha-topo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+} */
+
+.topo-logo {
+  background-color: white;
+
+  display: inline-block;
+
+  /* border-radius: 4px; */
+  width: 100%;
+}
+
+.topo-logo img {
+  height: 80px; /* ajustável conforme o tamanho real */
+  display: block;
+  margin: 0 auto;
+  padding: 10px 10px;
+
+}
+
+.linha-topo p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 10px 20px;
+ 
+}
+
+  
+
+   /* Header fixo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1rem 2rem;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+  background-color: #002B10;
+  backdrop-filter: none;
+}
+
+/* Container interno */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Navegação */
+header nav {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease; /* adiciona a transição suave pro efeito */
+  text-transform: uppercase;
+}
+
+header nav a:hover {
+  color: #12e658;
+  transform: scale(1.1) translateY(-3px); /* aumenta e sobe */
+}
+
+
+/* Estilo ao rolar */
+header.scrolled {
+background-color: rgba(0, 43, 16, 0.85); /* cor #002B10 com 85% opacidade */
+    /* background-color: rgba(0, 0, 0, 0.7); */
+  backdrop-filter: blur(6px);
+   top:0;
+    z-index: 999999; /* garante que fique por cima de tudo */
+}
+   .banner {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 100px; /* mesmo ou maior que a altura do header */
+  /* background-color: #135333; */
+
+}
+
+.banner-img {
+  height: 100%; /* ajuste aqui conforme necessário */
+  object-fit: cover;
+}
+.linha-grid {
+  display: flex;
+  flex-wrap: wrap;       /* Permite múltiplas linhas */
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  justify-content: center; /* Centraliza os itens na linha */
+}
+
+.linha {
+  width: calc(50% - 1rem); /* 2 por linha com gap de 2rem entre elas */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: #002B10;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  /* border: 3px solid black; */
+  gap: 2rem;
+  padding: 1.5rem 4rem;
+  transition: all 0.3s ease;
+  clip-path: polygon(
+    5% 0%, 95% 0%,
+    100% 100%, 0% 100%
+  );
+
+}
+
+.linha:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-6px);
+}
+
+
+
+
+
+
+.linha.invertido {
+  flex-direction: row-reverse;
+  clip-path: polygon(
+    0% 0%, 100% 0%,
+    95% 100%, 5% 100%
+  );
+  margin-top: 2rem; /* Ajuste aqui conforme o quanto você quer "abaixar" */
+}
+
+
+/* .imagem-container {
+  flex: 1 1 250px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #002B10; 
+} */
+
+
+.imagem-animada {
+  position: absolute; /* ou fixed, dependendo do comportamento que quer */
+  top: 720px;    /* distância do topo da página (ou do elemento pai posicionado) */
+  left: -360px;  /* distância da esquerda */
+  z-index: 9999; /* garante que fique por cima de tudo */
+  width: 750px;  /* tamanho que quiser ajustar */
+  pointer-events: none; /* se quiser que clique "passe" por cima da imagem */
+  /* border: 10px solid black; */
+}
+.imagem-animada1 {
+  position: absolute; /* ou fixed, dependendo do comportamento que quer */
+  top: 780px;    /* distância do topo da página (ou do elemento pai posicionado) */
+  left: 1290px;  /* distância da esquerda */
+  z-index: 9999; /* garante que fique por cima de tudo */
+  width: 1000px;  /* tamanho que quiser ajustar */
+  pointer-events: none; /* se quiser que clique "passe" por cima da imagem */
+}
+
+.imagem-animada2 {
+  position: absolute; /* ou fixed, dependendo do comportamento que quer */
+  top: 1499px;    /* distância do topo da página (ou do elemento pai posicionado) */
+  left: -240px;  /* distância da esquerda */
+  z-index: 9999; /* garante que fique por cima de tudo */
+  width: 700px;  /* tamanho que quiser ajustar */
+  pointer-events: none; /* se quiser que clique "passe" por cima da imagem */
+}
+
+.imagem-animada3 {
+  position: absolute; /* ou fixed, dependendo do comportamento que quer */
+  top: 1320px;    /* distância do topo da página (ou do elemento pai posicionado) */
+  left: 1500px;  /* distância da esquerda */
+  z-index: 9999; /* garante que fique por cima de tudo */
+  width: 750px;  /* tamanho que quiser ajustar */
+  pointer-events: none; /* se quiser que clique "passe" por cima da imagem */
+}
+.imagem-animada4 {
+  position: absolute; /* ou fixed, dependendo do comportamento que quer */
+  top: 1820px;    /* distância do topo da página (ou do elemento pai posicionado) */
+  left: -470px;  /* distância da esquerda */
+  z-index: 9999; /* garante que fique por cima de tudo */
+  width: 1000px;  /* tamanho que quiser ajustar */
+  pointer-events: none; /* se quiser que clique "passe" por cima da imagem */
+}
+
+.imagem-animada5 {
+  position: absolute; /* ou fixed, dependendo do comportamento que quer */
+  top: 1915px;    /* distância do topo da página (ou do elemento pai posicionado) */
+  left: 1405px;  /* distância da esquerda */
+  z-index: 9999; /* garante que fique por cima de tudo */
+  width: 900px;  /* tamanho que quiser ajustar */
+  pointer-events: none; /* se quiser que clique "passe" por cima da imagem */
+}
+
+.imagem-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  background-color: #002B10;
+}
+
+.info {
+  flex: 2 1 400px;
+  /* background-color: ; */
+}
+
+.info h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  
+}
+
+.info .subtitulo {
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.info .destaque {
+  color: #00ff5e;
+  font-weight: bold;
+   font-size: 3.5rem;
+  /* border: 3px solid black; */
+
+}
+
+.info p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+ margin-left: 290px;
+  width: 60%;
+  text-align: justify;
+}
+
+.linha.invertido .info p {
+  margin-left: 0;         /* remove o deslocamento padrão */
+  margin-right: 300px;    /* aplica o deslocamento à direita */
+  text-align: left;      /* opcional, se quiser alinhar o texto também */
+}
+
+.linha.invertido  .tabela-bitolas{
+   margin-left: 0;         /* remove o deslocamento padrão */
+  margin-right: 300px;    /* aplica o deslocamento à direita */
+  text-align: right;      /* opcional, se quiser alinhar o texto também */
+}
+.tabela-bitolas {
+   /* flex: 1 1 250px; */
+   /* text-align: left; */
+   margin-left: 300px;
+  width: 60%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      /* border: 2px solid black; */
+}
+
+.tabela-bitolas th {
+  background-color: #01752C;
+  color: #fff;
+  padding: .5rem;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.tabela-bitolas td {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0 0 4px 4px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 10px 20px;
+  font-style: italic;         /* Deixa o texto em itálico */
+  letter-spacing: 1px;        /* Aumenta o espaçamento entre letras */
+  line-height: 1.6;           /* Aumenta o espaçamento entre linhas */
+
+
+}
+
+@media (max-width: 768px) {
+  .linha-grid {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+
+  .linha,
+  .linha.invertido {
+    width: 100% !important;
+    flex-direction: column !important;
+    padding: 1.5rem 1rem;
+    clip-path: none;
+    border-radius: 20px; /* Borda arredondada */
+  }
+
+  .imagem-container img {
+    border-radius: 12px;
+  }
+
+  .info p,
+  .linha.invertido .info p,
+  .linha.invertido .tabela-bitolas,
+  .tabela-bitolas {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    text-align: justify;
+  }
+
+  .info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 150px;
+  }
+
+
+  
+
+
+.imagem-animada, 
+ 
+.imagem-animada1 ,
+ 
+.imagem-animada2 ,
+.imagem-animada3 ,
+.imagem-animada4 ,
+.imagem-animada5 {
+display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+  .info .destaque {
+    font-size: 2rem;
+  }
+
+ 
+}
+@media (max-width: 1024px) {
+  .linha-grid {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .linha,
+  .linha.invertido {
+    width: 100% !important;
+    flex-direction: column !important;
+    padding: 1.5rem 1rem;
+    clip-path: none;
+    border-radius: 20px; /* Borda arredondada */
+  }
+
+  .imagem-container img {
+    border-radius: 12px;
+  }
+
+  .info {
+    text-align: left;
+  }
+
+  .info h3 {
+    font-size: 1.5rem;
+  }
+
+  .info .destaque {
+    font-size: 2rem;
+  }
+
+  .info p,
+  .linha.invertido .info p,
+  .linha.invertido .tabela-bitolas,
+  .tabela-bitolas {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    text-align: justify;
+  }
+
+  
+}
+
+
+ 
+    /* footer */
+footer {
+  background-color: #002B10;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-size: small;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #01A83F;
+}
+
+.footer-col p,
+.footer-col li,
+.footer-col a {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #88cc88;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.logo-pequena {
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-linha {
+  border: 0;
+  border-top: 1px solid #01A83F;
+  margin: 1.5rem auto;
+  width: 100%;
+}
+
+
+.footer-creditos {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+table {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  /* border-radius: 20px; */
+}
+
+thead {
+  background-color: #333;
+  color: white;
+}
+
+
+
+td, th {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.zoom-container {
+  position: relative;
+  /* REMOVA ESSA LINHA 👇 */
+  /* overflow: hidden; */
+  width: 300px; /* ajuste conforme sua imagem */
+  height: auto;
+}
+
+.zoomable {
+  width: 100%;
+  display: block;
+}
+
+.lupa {
+  position: fixed; /* fixo na tela para sair da imagem */
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  pointer-events: none;
+  display: none;
+  z-index: 999999;
+   overflow: visible;
+}
+
+
+/* Versão mobile MENU */
+/* Ícone hamburguer - escondido no desktop */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background-color: rgba(0, 43, 16, 0.95); /* combina com seu estilo */
+    backdrop-filter: blur(6px);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: none;
+  }
+
+  header nav.show {
+    display: flex;
+  }
+}

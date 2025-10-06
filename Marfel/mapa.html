@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa Interativo - Região Norte</title>
+  <style>
+    .mapa-container {
+      position: relative;
+      width: 800px; /* ajuste conforme o tamanho do seu mapa */
+      margin: auto;
+    }
+
+    .estado {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease, z-index 0.3s ease;
+      z-index: 1;
+      pointer-events: auto;
+    }
+
+    .estado:hover {
+      transform: scale(1.1) translateY(-10px);
+      z-index: 10;
+    }
+
+    .estado:active {
+      transform: scale(1.05) translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+
+<div class="mapa-container">
+  <!-- Cada estado sobreposto -->
+   <img src="mapa/ac_Prancheta 1-08.png" alt="Acre" class="estado" />
+      <img src="mapa/ro_Prancheta 1-07.png" alt="Rondônia" class="estado" />
+      <img src="mapa/am_Prancheta 1-02.png" alt="Amazonas" class="estado" />
+      <img src="mapa/rr_Prancheta 1-03.png" alt="Roraima" class="estado" />
+      <img src="mapa/pa_Prancheta 1-04.png" alt="Pará" class="estado" />
+      <img src="mapa/ap_Prancheta 1-06.png" alt="Amapá" class="estado" />
+      <img src="mapa/to_Prancheta 1-05.png" alt="Tocantins" class="estado" />
+</div>
+
+</body>
+</html>

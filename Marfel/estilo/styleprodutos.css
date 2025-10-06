@@ -1,0 +1,583 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Changa', sans-serif;
+    line-height: 1.6;
+    height: 100%;
+    scroll-behavior: smooth;
+
+  }
+
+  h1, h2, h3, button {
+    font-family: 'Changa', sans-serif;
+    text-transform: uppercase;
+
+  }
+  button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+ button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 102, 0, 0.4);
+  }
+
+
+/* Botão Whats */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Distância do rodapé */
+  right: 20px;  /* Distância da borda direita */
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+#whatsapp-button img {
+  width: 60px;       /* Tamanho da imagem */
+  height: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px; /* Deixa mais com cara de botão, opcional */
+}
+
+/* Efeito de zoom e escurecer ao passar o mouse */
+#whatsapp-button img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  
+}
+  
+
+   /* Header fixo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1rem 2rem;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+  background-color: #002B10;
+  backdrop-filter: none;
+}
+
+/* Container interno */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Navegação */
+header nav {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease; /* adiciona a transição suave pro efeito */
+  text-transform: uppercase;
+}
+
+header nav a:hover {
+  color: #12e658;
+  transform: scale(1.1) translateY(-3px); /* aumenta e sobe */
+}
+
+
+/* Estilo ao rolar */
+header.scrolled {
+background-color: rgba(0, 43, 16, 0.85); /* cor #002B10 com 85% opacidade */
+    /* background-color: rgba(0, 0, 0, 0.7); */
+  backdrop-filter: blur(6px);
+   top:0;
+}
+   .banner {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 100px; /* mesmo ou maior que a altura do header */
+  /* background-color: #135333; */
+
+}
+
+.banner-img {
+  height: 100%; /* ajuste aqui conforme necessário */
+  object-fit: cover;
+}
+
+
+    .produtos-section {
+      padding: 3rem 2rem;
+    }
+
+    .produtos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .produto-card {
+      width: 240px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .produto-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      background: #001400;
+    }
+
+    .produto-card .info {
+      padding: 1rem;
+    }
+
+    .produto-card .info h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .produto-card .info p {
+      font-size: 0.875rem;
+      color: #444;
+    }
+
+ /* .verde{
+background-color: #135333;
+} */
+
+
+   .linha-topo {
+  background: #103a1e; /* verde escuro */
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 10;
+  width: 70%;
+  margin: 50px auto; /* top e bottom 50px, centralizado horizontalmente */
+
+  /* Efeito flutuar: sombra e leve transformação */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+/* Pequena animação hover para dar sensação de flutuar */
+/* .linha-topo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+} */
+
+.topo-logo {
+  background-color: white;
+
+  display: inline-block;
+
+  /* border-radius: 4px; */
+  width: 100%;
+}
+
+.topo-logo img {
+  height: 80px; /* ajustável conforme o tamanho real */
+  display: block;
+  margin: 0 auto;
+  padding: 10px 10px;
+
+}
+
+.linha-topo p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 10px 20px;
+}
+
+.linha-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
+  gap: 0.5rem;
+  width: 100vw; /* largura total da viewport */
+  max-width: none; /* remove limite de largura */
+  margin: 0; /* tira margem automática */
+  margin-bottom: 100px;
+  padding: 0 1rem; /* padding pequeno nas laterais, ajusta aqui se quiser menos */
+  box-sizing: border-box; /* garantir que padding seja contado dentro da largura */
+  
+}
+
+
+
+
+/* .linha {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+   padding: 3rem 2rem; 
+  margin: 2rem auto;
+  width: 50%;
+  max-width: 1200px;
+  gap: 2rem;
+  background-color: #124121;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+   height: auto; 
+} */
+
+/* .linha {
+  width: 78%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 1rem 0;
+  background-color: #124121;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  height: auto;
+} */
+
+.linha:nth-child(odd) .subtitulo {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #cccccc; /* cinza claro para ímpares */
+}
+
+.linha:nth-child(odd) .destaque {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #2a8138; /* verde vibrante para ímpares */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  text-transform: uppercase;
+}
+
+.linha:nth-child(even) .subtitulo {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #888888; /* cinza um pouco mais escuro para pares */
+}
+
+.linha:nth-child(even) .destaque {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #3bc452; /* verde mais escuro para pares */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  text-transform: uppercase;
+}
+
+
+
+.linha {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  /* padding: 3rem 2rem; */
+  margin: 2rem auto;
+  width: 78%;
+  max-width: 1200px;
+  gap: 2rem;
+  background-color: #133b12;
+  /* border-radius: 70px; */
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+   height: auto; /* ou o valor que preferir */
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.linha:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+.linha:nth-child(even) {
+  flex-direction: row-reverse;
+  background-color: #0a2513;
+  text-align: right;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+
+  
+}
+.linha:nth-child(odd) {
+ border-top-right-radius: 70px;
+  border-bottom-right-radius: 70px;
+
+  
+}
+
+
+.info {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+.linha:nth-child(even) .info {
+  border-right: 3px solid #2d862b; /* ou a cor que preferir */
+}
+.linha:nth-child(odd) .info {
+  border-left: 3px solid #0a2513;
+}
+
+
+
+.info h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+   text-align: left;
+   padding: 10px 10px;
+}
+
+/* Alinhamento para linhas ímpares */
+.linha:nth-child(odd) .info p {
+  text-align: left;
+}
+
+
+/* Alinhamento para linhas pares */
+.linha:nth-child(even) .info p {
+  text-align: right;
+}
+
+/* .linha:nth-child(odd) .info h3 {
+  text-align: left;
+}
+
+.linha:nth-child(even) .info h3 {
+  text-align: right;
+} */
+
+
+.bitolas {
+  background: #ffffff;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+ 
+}
+
+.bitolas strong {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.imagem-container {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0; /* REMOVE qualquer espaço interno */
+  margin: 0;
+}
+
+.imagem-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preenche toda a div, cortando o excesso */
+
+}
+
+
+
+/* Linha ímpar - flex-direction: row */
+.linha:nth-child(odd) .imagem-container:first-child img {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+
+.linha:nth-child(odd) .imagem-container:last-child img {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 70px;
+  border-bottom-right-radius: 70px;
+}
+
+/* Linha par - flex-direction: row-reverse */
+/* Aqui inverte o arredondamento porque a ordem visual mudou */
+.linha:nth-child(even) .imagem-container:first-child img {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 70px;
+  border-bottom-right-radius: 70px;
+}
+
+.linha:nth-child(even) .imagem-container:last-child img {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+
+     
+
+    /* footer */
+footer {
+  background-color: #002B10;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-size: small;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #01A83F;
+}
+
+.footer-col p,
+.footer-col li,
+.footer-col a {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #88cc88;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.logo-pequena {
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-linha {
+  border: 0;
+  border-top: 1px solid #01A83F;
+  margin: 1.5rem auto;
+  width: 100%;
+}
+
+
+.footer-creditos {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+ .produtos-grid {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .produto-card {
+    width: 100%;         /* ocupa toda a largura disponível */
+    max-width: 90vw;     /* com margem lateral suave */
+  }
+
+
+  
+
+  .linha {
+    flex-direction: column !important;
+    width: 95%;
+    border-radius: 20px !important;
+  }
+
+  .imagem-container, .info {
+    width: 100%;
+    flex: none;
+    padding: 1rem;
+  }
+
+  .imagem-container img {
+    border-radius: 20px !important;
+  }
+
+  .linha:nth-child(even),
+  .linha:nth-child(odd) {
+    border-radius: 20px !important;
+  }
+
+  .linha:nth-child(even) .info,
+  .linha:nth-child(odd) .info {
+    border: none;
+    text-align: center;
+  }
+
+  .linha:nth-child(even) .info p,
+  .linha:nth-child(odd) .info p {
+    text-align: center;
+  }
+}
